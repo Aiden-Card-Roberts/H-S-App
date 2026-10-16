@@ -1,0 +1,4 @@
+let dbPromise;
+function database(){return dbPromise??=new Promise((resolve,reject)=>{const request=indexedDB.open('fieldcheck',1);request.onupgradeneeded=()=>request.result.createObjectStore('audits',{keyPath:'id'});request.onsuccess=()=>resolve(request.result);request.onerror=()=>reject(request.error);});}
+export async function readAudits(){const db=await database();return new Promise((resolve,reject)=>{const request=db.transaction('audits').objectStore('audits').getAll();request.onsuccess=()=>resolve(request.result.sort((a,b)=>b.created.localeCompare(a.created)));request.onerror=()=>reject(request.error);});}
+export async function writeAudits(audits){const db=await database();return new Promise((resolve,reject)=>{const tx=db.transaction('audits','readwrite');const store=tx.objectStore('audits');for(const audit of audits)store.put(audit);tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error);});}

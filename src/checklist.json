@@ -1,0 +1,429 @@
+[
+  {
+    "id": "1",
+    "number": 1,
+    "section": "Traffic management & public safety",
+    "question": "Chapter 8 standard: is Traffic Management in place and to Chapter 8 requirements?",
+    "card": "red"
+  },
+  {
+    "id": "2",
+    "number": 2,
+    "section": "Traffic management & public safety",
+    "question": "Has Traffic Management been set up by GTW? If not, state name of subcontractor here:",
+    "card": null
+  },
+  {
+    "id": "3",
+    "number": 3,
+    "section": "Traffic management & public safety",
+    "question": "Are barriers present around an excavation?",
+    "card": null
+  },
+  {
+    "id": "4",
+    "number": 4,
+    "section": "Traffic management & public safety",
+    "question": "Are Courtesy Boards present on site and visible?",
+    "card": null
+  },
+  {
+    "id": "5",
+    "number": 5,
+    "section": "Traffic management & public safety",
+    "question": "Is there provision for public safety e.g., suitable existing footway?",
+    "card": "yellow"
+  },
+  {
+    "id": "6",
+    "number": 6,
+    "section": "Traffic management & public safety",
+    "question": "Is there provision in place for equine use and cyclists?",
+    "card": "yellow"
+  },
+  {
+    "id": "7",
+    "number": 7,
+    "section": "Personal protective equipment",
+    "question": "Is all the appropriate PPE being worn? (Clothing, Hard Hats, Gloves, Eye Safety Protection, Footwear, Ear Protection, Hi-Viz, Respiratory)?",
+    "card": "red"
+  },
+  {
+    "id": "8",
+    "number": 8,
+    "section": "Personal protective equipment",
+    "question": "Is all the appropriate PPE in good condition? If not, please notify HSQE",
+    "card": null
+  },
+  {
+    "id": "9",
+    "number": 9,
+    "section": "Personal protective equipment",
+    "question": "Chainsaw operators PPE – are they using what is required (if applicable)?",
+    "card": "red"
+  },
+  {
+    "id": "10",
+    "number": 10,
+    "section": "Risk assessments & operative documents",
+    "question": "Has the gang logged on to DepotNet? If no signal, have they filled in paper risk assessment (GTWF 99) and been reminded to transfer information by close of play? If not, give reason in observations section",
+    "card": "red"
+  },
+  {
+    "id": "11",
+    "number": 11,
+    "section": "Risk assessments & operative documents",
+    "question": "If working on ANY Low Voltage (LV) Joint User Pole (JUP) – LV being 1000 volts or less; or working with MEWP or PEU within 25 metres of a High Voltage power line (HV being greater than 1000 volts) has a Working in the Vicinity of Power risk assessment been filled in?",
+    "card": "red"
+  },
+  {
+    "id": "12",
+    "number": 12,
+    "section": "Risk assessments & operative documents",
+    "question": "Are all operatives carrying their Weil’s Disease & MJ Quinn ID cards? (MJQ Cards should have Weils Disease QR Code on reverse)",
+    "card": null
+  },
+  {
+    "id": "13",
+    "number": 13,
+    "section": "Risk assessments & operative documents",
+    "question": "Are Working in the Vicinity of Power (JUP) Risk Assessments present in all vehicles?",
+    "card": "red"
+  },
+  {
+    "id": "14",
+    "number": 14,
+    "section": "Risk assessments & operative documents",
+    "question": "Are GTWF 99 Paper Risk Assessment forms present in all vehicles?",
+    "card": "red"
+  },
+  {
+    "id": "15",
+    "number": 15,
+    "section": "Risk assessments & operative documents",
+    "question": "Is HAVS Risk Assessment present in all vehicles?",
+    "card": null
+  },
+  {
+    "id": "16",
+    "number": 16,
+    "section": "Risk assessments & operative documents",
+    "question": "Is COSHH wallet present in all vehicles?",
+    "card": null
+  },
+  {
+    "id": "17",
+    "number": 17,
+    "section": "Risk assessments & operative documents",
+    "question": "Do all operatives have their personal bag with them?",
+    "card": "yellow"
+  },
+  {
+    "id": "18",
+    "number": 18,
+    "section": "Risk assessments & operative documents",
+    "question": "Is the “no smoking / no vaping” sign present in the vehicle cab?",
+    "card": null
+  },
+  {
+    "id": "19",
+    "number": 19,
+    "section": "Safety equipment",
+    "question": "Is the CSS kit present in the Gang?",
+    "card": null
+  },
+  {
+    "id": "20",
+    "number": 20,
+    "section": "Safety equipment",
+    "question": "Are wind meters present and calibrated?",
+    "card": null
+  },
+  {
+    "id": "21",
+    "number": 21,
+    "section": "Safety equipment",
+    "question": "Is First Aid Kit Present?",
+    "card": "yellow"
+  },
+  {
+    "id": "22",
+    "number": 22,
+    "section": "Safety equipment",
+    "question": "Is First Aid Kit adequately stocked?",
+    "card": "yellow"
+  },
+  {
+    "id": "23",
+    "number": 23,
+    "section": "Safety equipment",
+    "question": "Is First Aid Kit in date?",
+    "card": "yellow"
+  },
+  {
+    "id": "24",
+    "number": 24,
+    "section": "Safety equipment",
+    "question": "Is Fire extinguisher – suitable type and charged?",
+    "card": "yellow"
+  },
+  {
+    "id": "25",
+    "number": 25,
+    "section": "Safety equipment",
+    "question": "Is Fire extinguisher in service date?",
+    "card": "yellow"
+  },
+  {
+    "id": "26",
+    "number": 26,
+    "section": "Safety equipment",
+    "question": "Is Bleed Control Kit located in the vehicle? applicable to the operators and vehicles with chainsaw only.",
+    "card": "yellow"
+  },
+  {
+    "id": "27",
+    "number": 27,
+    "section": "Safety equipment",
+    "question": "Manual Handling practices being adhered to (both when working and when moving materials)?",
+    "card": null
+  },
+  {
+    "id": "28",
+    "number": 28,
+    "section": "Safety equipment",
+    "question": "Are Cat & Genny / Vivax present and calibrated and in date? Check if charged?",
+    "card": "red"
+  },
+  {
+    "id": "29",
+    "number": 29,
+    "section": "Safety equipment",
+    "question": "Is the 4 inch clamp, present, calibrated and in date?",
+    "card": "red"
+  },
+  {
+    "id": "30",
+    "number": 30,
+    "section": "Safety equipment",
+    "question": "Is Gas Monitor (GDU) present, calibrated and in date? Check if charged?",
+    "card": "yellow"
+  },
+  {
+    "id": "31",
+    "number": 31,
+    "section": "Safety equipment",
+    "question": "Is ladder present in Gang (if applicable)? If yes check N.S.D.",
+    "card": "yellow"
+  },
+  {
+    "id": "32",
+    "number": 32,
+    "section": "Safety equipment",
+    "question": "Is water suppression kit present?",
+    "card": null
+  },
+  {
+    "id": "33",
+    "number": 33,
+    "section": "Safety equipment",
+    "question": "Harnesses readily available and in date? If not then note this in table on page 4",
+    "card": "red"
+  },
+  {
+    "id": "34",
+    "number": 34,
+    "section": "Lifting equipment & tools",
+    "question": "Are lifting shackles present on the vehicle?",
+    "card": "yellow"
+  },
+  {
+    "id": "35",
+    "number": 35,
+    "section": "Lifting equipment & tools",
+    "question": "Are ALL wire slings tagged and labelled?",
+    "card": "yellow"
+  },
+  {
+    "id": "36",
+    "number": 36,
+    "section": "Lifting equipment & tools",
+    "question": "Are ALL chains tagged and labelled?",
+    "card": "yellow"
+  },
+  {
+    "id": "37",
+    "number": 37,
+    "section": "Lifting equipment & tools",
+    "question": "Is ALL webbing tagged and labelled?",
+    "card": "yellow"
+  },
+  {
+    "id": "38",
+    "number": 38,
+    "section": "Lifting equipment & tools",
+    "question": "Are ALL ratchets tagged and labelled?",
+    "card": "yellow"
+  },
+  {
+    "id": "39",
+    "number": 39,
+    "section": "Lifting equipment & tools",
+    "question": "Are pole jacks present on the vehicle?",
+    "card": null
+  },
+  {
+    "id": "40",
+    "number": 40,
+    "section": "Lifting equipment & tools",
+    "question": "Are disc cutters present on the vehicle?",
+    "card": null
+  },
+  {
+    "id": "41",
+    "number": 41,
+    "section": "Lifting equipment & tools",
+    "question": "Are jack hammers present on the vehicle?",
+    "card": null
+  },
+  {
+    "id": "42",
+    "number": 42,
+    "section": "Lifting equipment & tools",
+    "question": "Is a chainsaw present on the vehicle?",
+    "card": null
+  },
+  {
+    "id": "43",
+    "number": 43,
+    "section": "Environment, housekeeping & vehicles",
+    "question": "Is Spill Kit available in all vehicles including plant?",
+    "card": "yellow"
+  },
+  {
+    "id": "44",
+    "number": 44,
+    "section": "Environment, housekeeping & vehicles",
+    "question": "Are plant nappies present on the vehicles?",
+    "card": null
+  },
+  {
+    "id": "45",
+    "number": 45,
+    "section": "Environment, housekeeping & vehicles",
+    "question": "Are adequate controls in place to prevent excessive noise and dust? Particularly when Rock Drill is being used.",
+    "card": null
+  },
+  {
+    "id": "46",
+    "number": 46,
+    "section": "Environment, housekeeping & vehicles",
+    "question": "Are all vehicles which carry poles carrying 2 pole socks?",
+    "card": "yellow"
+  },
+  {
+    "id": "47",
+    "number": 47,
+    "section": "Environment, housekeeping & vehicles",
+    "question": "Are ALL fuels / oils stored correctly i.e. bunded in all vehicles?",
+    "card": null
+  },
+  {
+    "id": "48",
+    "number": 48,
+    "section": "Environment, housekeeping & vehicles",
+    "question": "Are ALL items of plant in good order – no leaks, excessive noise, smoke?",
+    "card": null
+  },
+  {
+    "id": "49",
+    "number": 49,
+    "section": "Environment, housekeeping & vehicles",
+    "question": "Site housekeeping – is site clean and tidy?",
+    "card": null
+  },
+  {
+    "id": "50",
+    "number": 50,
+    "section": "Environment, housekeeping & vehicles",
+    "question": "Is spoil sheet present on the vehicle?",
+    "card": null
+  },
+  {
+    "id": "51",
+    "number": 51,
+    "section": "Environment, housekeeping & vehicles",
+    "question": "Any waste segregated and stored correctly on site? This is the site that is being worked by the gangs.",
+    "card": null
+  },
+  {
+    "id": "52",
+    "number": 52,
+    "section": "Environment, housekeeping & vehicles",
+    "question": "Vehicle housekeeping – is vehicle clean and tidy inside and out? Both cab and rear?",
+    "card": null
+  },
+  {
+    "id": "53",
+    "number": 53,
+    "section": "Environment, housekeeping & vehicles",
+    "question": "Are ALL materials stored correctly, stacked, positioned and secured in all relevant vehicles?",
+    "card": null
+  },
+  {
+    "id": "54",
+    "number": 54,
+    "section": "Environment, housekeeping & vehicles",
+    "question": "Have the daily vehicle checks been carried out and evidenced in the Vehicle Check & Defect Report book?",
+    "card": "yellow"
+  },
+  {
+    "id": "55",
+    "number": 55,
+    "section": "Environment, housekeeping & vehicles",
+    "question": "Are there any potential environmental issues accommodated e.g., Japanese Knotweed",
+    "card": null
+  },
+  {
+    "id": "56",
+    "number": 56,
+    "section": "Environment, housekeeping & vehicles",
+    "question": "Is the vehicle carrying all materials for reinstating?",
+    "card": null
+  },
+  {
+    "id": "57",
+    "number": 57,
+    "section": "Environment, housekeeping & vehicles",
+    "question": "Is drop-wire height measuring pole present?",
+    "card": null
+  },
+  {
+    "id": "58",
+    "number": 58,
+    "section": "Environment, housekeeping & vehicles",
+    "question": "Industry compliance – have all used poles been stripped of furniture and fittings before loading onto any vehicle?",
+    "card": "red"
+  },
+  {
+    "id": "59",
+    "number": 59,
+    "section": "Non-conformities",
+    "question": "Has the employee or operative been subjected to any Non-Conformities within the last 30 days?",
+    "card": null
+  },
+  {
+    "id": "60",
+    "number": 60,
+    "section": "Non-conformities",
+    "question": "Are two-way radios present on the vehicle (if applicable)?",
+    "card": "yellow"
+  },
+  {
+    "id": "61",
+    "number": 61,
+    "section": "Non-conformities",
+    "question": "Have any Non-Conformities been identified during this audit? If yes, ensure these are formally reported to the H&S Manager within 48 hours in accordance with the 48 Hour Rule. This could include a non-red or -yellow card issue. A red card issue must raise a non- conformity",
+    "card": null
+  }
+]
