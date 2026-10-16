@@ -9,7 +9,8 @@
     "preview": "vite preview --host 0.0.0.0",
     "test": "node --test",
     "test:smoke": "node scripts/smoke.cjs",
-    "build:pages": "vite build --base=/H-S-App/ --outDir=dist-pages"
+    "build:pages": "vite build --base=/H-S-App/ --outDir=dist-pages",
+    "publish:pages": "bash scripts/publish-pages.sh"
   },
   "devDependencies": {
     "playwright": "^1.64.0",

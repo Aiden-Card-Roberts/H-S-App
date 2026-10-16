@@ -1,6 +1,6 @@
 # Fieldcheck — HS&E Gang Inspections
 
-A mobile-friendly, offline-first web app based on **GTWF 44, issue 10 (13 January 2026)**. The source form is in [docs/GTWF44-issue10.pdf](docs/GTWF44-issue10.pdf).
+A mobile-friendly, offline-first web app based on **GTWF 44, issue 10 (13 January 2026)**. The original uploaded PDF is retained locally in `docs/GTWF44-issue10.pdf`; it is excluded from the published website.
 
 ## Develop and validate
 
@@ -46,4 +46,10 @@ File completed reports in the Site Inspections folder and manually distribute no
 
 Use this existing isolated checkout; do not create a Git worktree unless requested. Dependencies and generated builds are retained files. Development/preview servers must be restarted in a new task. Installation and startup instructions are also saved in the cloud environment draft for review and publication.
 
-The app is prepared locally in the cloud checkout. It has not been pushed to GitHub or deployed to a public HTTPS host.
+## Website publishing
+
+`npm run build:pages` builds the app for the `/H-S-App/` path used by GitHub Pages. `npm run publish:pages` builds and uploads only the generated website files to the existing repository’s `gh-pages` branch, preserving branch history and rejecting concurrent conflicting updates. The uploaded PDF and local browser audit data are not included.
+
+GitHub Pages must serve the `gh-pages` branch from its root directory. If it has not enabled that automatically, it can be configured through the repository Pages settings or the GitHub API. Uploading a branch alone does not prove that Pages is enabled or the website is live. Verify the resulting HTTPS site and its offline workflow before declaring publishing complete.
+
+The browser test also supports `APP_URL`, for example `APP_URL=http://127.0.0.1:4174/H-S-App/ npm run test:smoke`, to validate the project-path build. Keep a stable final website address because audits are stored per browser origin.

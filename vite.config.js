@@ -1,9 +1,10 @@
 import {defineConfig} from 'vite';
+let publicBase='/';
 export default defineConfig({plugins:[{
   name:'offline-cache',
-  configResolved(config){this.publicBase=config.base;},
+  configResolved(config){publicBase=config.base;},
   generateBundle(_,bundle){
-    const base=this.publicBase||'/';
+    const base=publicBase;
     const assets=[...new Set([base,`${base}index.html`,`${base}manifest.webmanifest`,`${base}icon.svg`,...Object.keys(bundle).map(file=>`${base}${file}`)])];
     const prefix=`fieldcheck-${base}-`;
     const version=Object.keys(bundle).join('|');
