@@ -1,5 +1,7 @@
 # Fieldcheck — HS&E Gang Inspections
 
+**Open the app: https://aiden-card-roberts.github.io/H-S-App/**
+
 A mobile-friendly, offline-first web app based on **GTWF 44, issue 10 (13 January 2026)**. The original uploaded PDF is retained locally in `docs/GTWF44-issue10.pdf`; it is excluded from the published website.
 
 ## Develop and validate
