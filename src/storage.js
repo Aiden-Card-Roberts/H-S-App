@@ -1,4 +1,6 @@
-let dbPromise;
-function database(){return dbPromise??=new Promise((resolve,reject)=>{const request=indexedDB.open('fieldcheck',1);request.onupgradeneeded=()=>request.result.createObjectStore('audits',{keyPath:'id'});request.onsuccess=()=>resolve(request.result);request.onerror=()=>reject(request.error);});}
+let scope='demo';const databases=new Map();
+export function setStorageScope(value){scope=value;}
+function database(){const name=scope==='demo'?'fieldcheck':`fieldcheck.${scope}`;if(!databases.has(name))databases.set(name,new Promise((resolve,reject)=>{const request=indexedDB.open(name,1);request.onupgradeneeded=()=>request.result.createObjectStore('audits',{keyPath:'id'});request.onsuccess=()=>resolve(request.result);request.onerror=()=>reject(request.error);}));return databases.get(name);}
 export async function readAudits(){const db=await database();return new Promise((resolve,reject)=>{const request=db.transaction('audits').objectStore('audits').getAll();request.onsuccess=()=>resolve(request.result.sort((a,b)=>b.created.localeCompare(a.created)));request.onerror=()=>reject(request.error);});}
 export async function writeAudits(audits){const db=await database();return new Promise((resolve,reject)=>{const tx=db.transaction('audits','readwrite');const store=tx.objectStore('audits');for(const audit of audits)store.put(audit);tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error);});}
+export async function clearCurrentAudits(){const db=await database();return new Promise((resolve,reject)=>{const tx=db.transaction('audits','readwrite');tx.objectStore('audits').clear();tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error);tx.onabort=()=>reject(tx.error);});}

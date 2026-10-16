@@ -1,0 +1,31 @@
+services:
+  - type: web
+    name: fieldcheck-audits
+    runtime: docker
+    plan: starter
+    region: frankfurt
+    numInstances: 1
+    healthCheckPath: /api/health
+    disk:
+      name: fieldcheck-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_PATH
+        value: /var/data/fieldcheck.sqlite
+      - key: TRUST_PROXY
+        value: '1'
+      - key: STRIPE_SECRET_KEY
+        sync: false
+      - key: STRIPE_WEBHOOK_SECRET
+        sync: false
+      - key: STRIPE_PRICE_TEAM5
+        sync: false
+      - key: STRIPE_PRICE_TEAM10
+        sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      - key: MAIL_FROM
+        sync: false

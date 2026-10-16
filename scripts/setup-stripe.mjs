@@ -1,0 +1,16 @@
+import {writeFile,mkdir} from 'node:fs/promises';
+import path from 'node:path';
+import {createHash} from 'node:crypto';
+import Stripe from 'stripe';
+const key=process.env.STRIPE_SECRET_KEY,url=process.env.APP_URL||process.env.RENDER_EXTERNAL_URL;
+if(!key||!url)throw Error('Set STRIPE_SECRET_KEY and APP_URL securely before running this command.');
+const origin=new URL(url);if(origin.protocol!=='https:'||origin.pathname!=='/')throw Error('APP_URL must be your HTTPS website origin.');
+const stripe=new Stripe(key,{httpClient:Stripe.createFetchHttpClient(),maxNetworkRetries:2});
+const balance=await stripe.balance.retrieve();const mode=process.env.STRIPE_MODE||'test';if(!['test','live'].includes(mode)||balance.livemode!==(mode==='live'))throw Error('Stripe mode does not match. Live configuration requires STRIPE_MODE=live explicitly.');
+const namespace=createHash('sha256').update(origin.origin).digest('hex').slice(0,20);
+const product=await stripe.products.create({name:'Fieldcheck company subscription',metadata:{application:'fieldcheck'}},{idempotencyKey:`${namespace}-product-v1`});
+const prices=[];for(const [seats,amount] of [[5,5500],[10,7500]])prices.push(await stripe.prices.create({product:product.id,currency:'gbp',unit_amount:amount,recurring:{interval:'month'},nickname:`Up to ${seats} inspectors`,metadata:{inspectors:String(seats)}},{idempotencyKey:`${namespace}-team${seats}-v1`}));
+const endpoint=await stripe.webhookEndpoints.create({url:origin.origin+'/api/billing/webhook',enabled_events:['checkout.session.completed','customer.subscription.created','customer.subscription.updated','customer.subscription.deleted','invoice.paid','invoice.payment_failed']},{idempotencyKey:`${namespace}-webhook-v1`});
+if(!endpoint.secret)throw Error('The signing secret was not returned. Use the Stripe dashboard to retrieve it securely.');
+const output=path.resolve(process.env.STRIPE_CONFIG_FILE||'.env.stripe.generated');await mkdir(path.dirname(output),{recursive:true});await writeFile(output,`STRIPE_PRICE_TEAM5=${prices[0].id}\nSTRIPE_PRICE_TEAM10=${prices[1].id}\nSTRIPE_WEBHOOK_SECRET=${endpoint.secret}\n`,{mode:0o600,flag:'wx'});
+console.log(`Configured ${mode} monthly GBP prices and webhook. Settings were saved securely to ${path.basename(output)}; they were not printed.`);
