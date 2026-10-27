@@ -1,0 +1,5 @@
+const sections=[{page:'audits',label:'Gang inspections',icon:'◫',sidebarId:'ppe-audits-nav',headerId:'ppe-audits'},{page:'ppe',label:'PPE requests',icon:'◈',sidebarId:'ppe-open-nav',headerId:'ppe-open'}];
+function links(current,sidebar){return sections.map(section=>`<button id="${sidebar?section.sidebarId:section.headerId}" class="${sidebar?'workspace-link':'secondary'}${section.page===current?' is-current':''}" data-workspace-page="${section.page}" ${section.page===current?'aria-current="page"':''}>${sidebar?section.icon+' &nbsp; ':''}${section.label}</button>`).join('');}
+export function workspaceSidebar(current){return `<nav class="workspace-navigation" aria-label="Workspace sections">${links(current,true)}</nav>`;}
+export function workspaceSwitcher(current){return `<nav class="workspace-switcher" aria-label="Form sections">${links(current,false)}</nav>`;}
+export function bindWorkspaceNavigation(container,handlers){container.querySelectorAll('[data-workspace-page]').forEach(button=>{button.onclick=()=>handlers[button.dataset.workspacePage]?.();});}

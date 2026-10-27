@@ -2,6 +2,8 @@
 
 Open **PPE requests** from the audit header, or use the public demo at `https://aiden-card-roberts.github.io/H-S-App/#ppe`.
 
+Gang inspections and PPE requests share the same sidebar and header navigation. Both links stay available in either section; switching sections preserves the current PPE draft and evidence photos.
+
 The supplied stock list is the default dropdown:
 
 - Fire retardant Hi-vis waterproof coat
