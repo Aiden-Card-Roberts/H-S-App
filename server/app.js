@@ -1,4 +1,5 @@
 import express from 'express';
+import {registerPpeRoutes} from './ppe.js';
 import helmet from 'helmet';
 import {rateLimit} from 'express-rate-limit';
 import {randomUUID} from 'node:crypto';
@@ -76,6 +77,7 @@ export function createApp({config,db,stripe,mailer,now=Date.now,rateLimits=true}
    db.prepare('INSERT INTO audits VALUES(?,?,?,?,?,?) ON CONFLICT(company_id,id) DO UPDATE SET payload=excluded.payload,version=excluded.version,updated=excluded.updated').run(audit.id,req.company.id,old?.author_id||req.identity.id,JSON.stringify(clean),version+1,now());return {version:version+1,author:old?.author_id||req.identity.id};
   });res.json(saved);
  });
+ registerPpeRoutes(app,{db,now,origin,authenticated,csrf,verified,owner,paid,jsonOnly});
  app.use('/api',(req,res)=>res.status(404).json({error:'API endpoint not found.'}));
  app.use(express.static(config.staticDir,{dotfiles:'deny',setHeaders:(res,file)=>{if(file.endsWith('sw.js'))res.set('Cache-Control','no-store');else if(file.endsWith('.html'))res.set('Cache-Control','no-cache');}}));
  app.get('/{*path}',(req,res)=>res.sendFile(path.join(config.staticDir,'index.html')));

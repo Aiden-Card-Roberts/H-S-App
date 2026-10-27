@@ -15,7 +15,8 @@
     "dev:server": "node --use-env-proxy --watch server/index.js",
     "build:demo": "vite build --mode demo",
     "test:accounts": "node scripts/accounts-smoke.mjs",
-    "setup:stripe": "node --use-env-proxy --env-file-if-exists=.env scripts/setup-stripe.mjs"
+    "setup:stripe": "node --use-env-proxy --env-file-if-exists=.env scripts/setup-stripe.mjs",
+    "test:ppe": "node scripts/ppe-smoke.mjs"
   },
   "devDependencies": {
     "playwright": "^1.64.0",

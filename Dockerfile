@@ -14,7 +14,7 @@ COPY --chown=node:node package*.json ./
 RUN --mount=type=secret,id=npm_ca if [ -f /run/secrets/npm_ca ]; then npm ci --omit=dev --no-audit --no-fund --cafile /run/secrets/npm_ca; else npm ci --omit=dev --no-audit --no-fund; fi && npm cache clean --force
 COPY --from=build --chown=node:node /app/dist ./dist
 COPY --chown=node:node server ./server
-COPY --chown=node:node src/audit.js src/checklist.json ./src/
+COPY --chown=node:node src/audit.js src/checklist.json src/ppe-model.js ./src/
 RUN mkdir -p /var/data && chown node:node /var/data
 USER node
 EXPOSE 3000

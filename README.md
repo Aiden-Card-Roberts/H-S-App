@@ -46,6 +46,12 @@ Photos, names, signatures and other inspection data are included in exported bac
 
 File completed reports in the Site Inspections folder and manually distribute non-conformities within the form’s 48-hour requirement. The app records findings and reminders; it does not claim that reporting has been completed.
 
+## PPE requests
+
+Open **PPE requests** in the app to request an item, select its size and quantity, explain why it is needed and attach photo evidence. The dropdown uses the supplied eight-item stock list, six clothing sizes and boot sizes 5–13. Company owners can update the list and review submitted requests.
+
+The public demo keeps these requests on the device. Company submission requires the configured account server. See [PPE workflow and tests](docs/PPE.md).
+
 ## Company plans
 
 - Team 5: **£55 per company per month**, up to 5 inspectors.
